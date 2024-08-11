@@ -1,0 +1,14 @@
+Issue:
+	It is recommended that your private key files are NOT accessible by others.
+	This private key will be ignored.	
+Solution:
+	The keys need to be read-writable only by you:
+	> chmod 600 ~/.ssh/ansible
+	Alternatively, the keys can be only readable by you (this also blocks your write access):
+	> chmod 400 ~/.ssh/ansible
+
+Ansible inventory list all hosts and information:
+	> ansible-inventory -i inventory.yml --list
+
+Ansible inventory ping host:
+	> ansible <hostname> -m ping -i inventory.yml

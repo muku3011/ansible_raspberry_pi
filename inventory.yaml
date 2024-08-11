@@ -1,0 +1,12 @@
+rbpi:
+  hosts:
+    rbpi-one:
+      ansible_host: 192.168.1.100
+      ansible_user: rbpi-one
+      ansible_ssh_private_key_file: ~/.ssh/ansible
+    rbpi-two:
+      ansible_host: 192.168.1.200 
+      ansible_user: rbpi-two
+      ansible_ssh_private_key_file: ~/.ssh/ansible
+    vars:
+      test_variable: working
